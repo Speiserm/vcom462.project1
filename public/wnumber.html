@@ -13,7 +13,13 @@
 <body>
 
   <h1>Welcome to the Courtyard desk kiosk</h1>
-  <input type="button" onclick="location.href='wnumber.html';" value="Check in your guests" />
+  <h2>Please enter your W#:</h2>
+ <!-- action="isguest.html" -->
+    <p class="wnumberInput">W</p>
+    <input id="wnumber" class="wnumberInput" type="number" placeholder="12345678" step="1" min="10000000" max="99999999"/>
+    <button type="submit" value="Submit" onclick="store('wnumber')">Submit</button>
+
+  <p id="testreplace"></p>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="javascripts/script.js"></script>
