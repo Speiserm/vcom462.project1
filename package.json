@@ -1,6 +1,5 @@
 {
   "name": "project.1",
-<<<<<<< HEAD
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -13,7 +12,7 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1"
-  }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Speiserm/vcom462.project1.git"
@@ -24,4 +23,5 @@
     "url": "https://github.com/Speiserm/vcom462.project1/issues"
   },
   "homepage": "https://github.com/Speiserm/vcom462.project1#readme"
+
 }
