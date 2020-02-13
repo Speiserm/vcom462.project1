@@ -10,26 +10,20 @@ function makeHost(id) {
 }
 
 
-class Host {
-  constructor (number) {
-    this.idNumber = number;
-  }
-  static getNumberStudentGuests () {
-    return 6;
-  }
-  static getName () {
-    return "Mike Speiser";
-  }
+var host = new Object();
+{
+  host.idNumber = 00000000;
+  host.firstName = "Mike";
+  host.lastName = "Speiser";
+  host.getName = getName(host.firstName, host.lastName);
+  host.numberguests = 0;
 }
 
-function Person (number, first, last) {
-  this.idNumber = number;
-  this.firstName = first;
-  this.lastName = last;
-  this.getName = function () {return this.firstName + " " + this.lastName;};
-  this.overnight = new Boolean(false);
-  this.isOvernight = function () {return this.overnight;};
+function getName (firstName, lastName) {
+  return firstName + " " + lastName;
 }
+
+ var guests = {firstName:"John", lastName:"Doe", id:00000000}; 
 
 function increase (field) {
   if(checkMaxGuests() && parseInt(document.getElementById(field).innerHTML) <= 3) {
@@ -58,11 +52,10 @@ function fillNumberguests () {
 }
 
 function fillGuestinfo () {
-  //document.getElementById('nameheader').innerHTML += host.getName;
-  host.numberStudentGuests = 10;
-  for (i=0; i < host.numberStudentGuests; i++) {
-    document.getElementById('studentInfoList').innerHTML += "<li><p class='wnumberInput'>W</p> <input id='wnumber' class='wnumberInput' type='number' placeholder='12345678' step='1' min='10000000' max='99999999'/></li>"
-  }
-  document.getElementById('nonStudentInfoDiv').innerHTML = {
-  }
+  for (var i = 0; i < names.length; i++) {
+    var name = names[i];
+    var li = document.createElement('li');
+    li.appendChild(document.createTextNode(name));
+    ul.appendChild(li);
+}
 }
