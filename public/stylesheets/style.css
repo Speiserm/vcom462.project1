@@ -25,3 +25,12 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance:textfield;
 }
+
+img {
+  max-height: 20px;
+  max-width: 20px;
+}
+
+#studentCountDiv #nonStudentCountDiv img{
+  display: inline;
+}
