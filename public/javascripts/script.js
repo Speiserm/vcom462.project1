@@ -5,16 +5,21 @@ function store(field){
 
 
 function makeHost(id) {
-  var host = new Host (id);
+  host = new Host (7);
   console.log('made it to makehost');
 }
 
 
-function Host (number) {
-  this.idNumber = number;
-  this.firstName = "Mike";
-  this.lastName = "Speiser";
-  this.getName = function () {return this.firstName + " " + this.lastName;};
+class Host {
+  constructor (number) {
+    this.idNumber = number;
+  }
+  static getNumberStudentGuests () {
+    return 6;
+  }
+  static getName () {
+    return "Mike Speiser";
+  }
 }
 
 function Person (number, first, last) {
@@ -40,6 +45,7 @@ function decrease (field) {
 
 function checkMaxGuests () {
   if(((parseInt(document.getElementById('studentCount').innerHTML)) + (parseInt(document.getElementById('nonStudentCount').innerHTML)) >=4)) {
+    document.getElementById('warningtext').innerHTML = "Sorry, you can only check in a total of 4 guests per room.";
     return false;
   }
   else {
@@ -47,6 +53,16 @@ function checkMaxGuests () {
   }
 }
 
-function fillPage () {
-  document.getElementById('nameheader').innerHTML += Host.getName;
+function fillNumberguests () {
+  document.getElementById('nameheader').innerHTML += host.getName;
+}
+
+function fillGuestinfo () {
+  //document.getElementById('nameheader').innerHTML += host.getName;
+  host.numberStudentGuests = 10;
+  for (i=0; i < host.numberStudentGuests; i++) {
+    document.getElementById('studentInfoList').innerHTML += "<li><p class='wnumberInput'>W</p> <input id='wnumber' class='wnumberInput' type='number' placeholder='12345678' step='1' min='10000000' max='99999999'/></li>"
+  }
+  document.getElementById('nonStudentInfoDiv').innerHTML = {
+  }
 }
