@@ -260,8 +260,6 @@ function fillInfo () {
 }
 
 function clearGuests () {
-  localStorage.numberStudents  = 0;
-  localStorage.numberNonStudents = 0;
   localStorage.guest1name = null;
   localStorage.guest2name = null;
   localStorage.guest3name = null;
@@ -270,8 +268,4 @@ function clearGuests () {
   localStorage.guest2number = null;
   localStorage.guest3number = null;
   localStorage.guest4number = null;
-  localStorage.guest1overnight = false;
-  localStorage.guest2overnight = false;
-  localStorage.guest3overnight = false;
-  localStorage.guest4overnight = false;
 }

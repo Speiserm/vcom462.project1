@@ -60,6 +60,6 @@ img {
   visibility: hidden;
 }
 
-#overnightList  {
+#overnightList, #completeList  {
   list-style-type: none;
 }
