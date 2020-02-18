@@ -1,5 +1,16 @@
 @html.extend('layout', function(model) {
   @html.block('content', function(model) {
-  Your reciepts: 
+  <p>Your reciepts:</p>
+  <form action="/">
+    <div id='completeDiv'>
+      <ul id='completeList'>
+        <li><p id='guest1name'></p><p id='guest1number'></p><p id='guest1overnight'></p></li>
+        <li><p id='guest2name'></p><p id='guest2number'></p><p id='guest2overnight'></p></li>
+        <li><p id='guest3name'></p><p id='guest3number'></p><p id='guest3overnight'></p></li>
+        <li><p id='guest4name'></p><p id='guest4number'></p><p id='guest4overnight'></p></li>
+      </ul>
+    </div>
+    <button type="submit" value="Start over">Start over</button>
+ </form>
   })
 })

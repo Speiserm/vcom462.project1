@@ -1,11 +1,15 @@
 @html.extend('layout', function(model) {
   @html.block('content', function(model) {
-    <form action="/nightsCount">
+    <form action="/complete">
       <div id='overnightDiv'>
         <ul id='overnightList'>
+          <li><label for="button1" id="button1label" onclick="button1action()"></label></li>
+          <li><label for="button2" id="button2label" onclick="button2action()"></label></li>
+          <li><label for="button3" id="button3label" onclick="button3action()"></label></li>
+          <li><label for="button4" id="button4label" onclick="button4action()"></label></li>
         </ul>
       </div>
-      <button type="button" value="Submit" onclick="storeOvernights()">Next -></button>
+      <button type="submit" value="Submit">Next</button>
    </form>
   })
 })

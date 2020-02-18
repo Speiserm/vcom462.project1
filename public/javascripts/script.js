@@ -119,46 +119,47 @@ function saveGuestInfo () {
 function fillOvernightInfo () {
   if (document.getElementById('overnightDiv')){
   var list1 = document.getElementById('overnightList');
-    var button = document.createElement('checkbox');
-    var name = localStorage.guest1name;
-    button.value = name;
-    button.innerHTML = name;
-    button.id = 'button1';
-    button.type = 'button';
-    button.class = 'overnightButtons';
-    button.onclick = console.log('test');
-    list1.appendChild(button);
 
+  if(localStorage.guest1name != 'null') {
+    var button = document.createElement('input');
+    var name = localStorage.guest1name;
+    button.name = name;
+    button.id = 'button1';
+    button.type = 'checkbox';
+    button.class = 'overnightButtons';
+    document.getElementById('button1label').innerHTML = name;
+    list1.appendChild(button);
+}
     if(localStorage.guest2name != 'null') {
-      var button = document.createElement('button');
+      var button = document.createElement('input');
       var name = localStorage.guest2name;
-      button.innerHTML = name;
+      button.name = name;
       button.id = 'button2';
-      button.type = 'button';
+      button.type = 'checkbox';
       button.class = 'overnightButtons';
-      button.onclick = (localStorage.guest2overnight = !localStorage.guest2overnight);
+      document.getElementById('button2label').innerHTML = name;
       list1.appendChild(button);
     }
 
     if(localStorage.guest3name != 'null') {
-      var button = document.createElement('button');
+      var button = document.createElement('input');
       var name = localStorage.guest3name;
-      button.innerHTML = name;
+      button.name = name;
       button.id = 'button3';
-      button.type = 'button';
+      button.type = 'checkbox';
       button.class = 'overnightButtons';
-      button.onclick = (localStorage.guest3overnight = !localStorage.guest3overnight);
+      document.getElementById('button3label').innerHTML = name;
       list1.appendChild(button);
     }
 
     if(localStorage.guest4name != 'null') {
-      var button = document.createElement('button');
+      var button = document.createElement('input');
       var name = localStorage.guest4name;
-      button.innerHTML = name;
+      button.name = name;
       button.id = 'button4';
       button.type = 'checkbox';
       button.class = 'overnightButtons';
-      button.onclick = (localStorage.guest4overnight = !localStorage.guest4overnight);
+      document.getElementById('button4label').innerHTML = name;
       list1.appendChild(button);
     }
 }
@@ -168,11 +169,109 @@ function flip (bool) {
   console.log (bool);
 }
 
-function storeOvernights () {
-  console.log(localStorage.guest1overnight);
+function button1action () {
+  var checkBox = document.getElementById("button1");
+  if (checkBox.checked == true) {
+    localStorage.guest1overnight = false;
+    document.getElementById('button1label').style.color= 'black';
+  }
+  else {
+    localStorage.guest1overnight = true;
+    document.getElementById('button1label').style.color= 'green';
+  }
+}
+
+function button2action () {
+  var checkBox = document.getElementById("button2");
+  if (checkBox.checked == true) {
+    localStorage.guest1overnight = false;
+    document.getElementById('button2label').style.color= 'black';
+  }
+  else {
+    localStorage.guest1overnight = true;
+    document.getElementById('button2label').style.color= 'green';
+  }
+}
+
+function button3action () {
+  var checkBox = document.getElementById("button3");
+  if (checkBox.checked == true) {
+    localStorage.guest1overnight = false;
+    document.getElementById('button3label').style.color= 'black';
+  }
+  else {
+    localStorage.guest1overnight = true;
+    document.getElementById('button3label').style.color= 'green';
+
+  }
+}
+
+function button4action () {
+  var checkBox = document.getElementById("button4");
+  if (checkBox.checked == true) {
+    localStorage.guest1overnight = false;
+    document.getElementById('button4label').style.color= 'black';
+  }
+  else {
+    localStorage.guest1overnight = true;
+    document.getElementById('button4label').style.color= 'green';
+  }
+}
+
+function fillReciepts () {
+  if (document.getElementById('completeDiv')){
+  var list1 = document.getElementById('completeList');
+    document.getElementById('guest1name').innerHTML = localStorage.guest1name;
+    document.getElementById('guest1number').innerHTML = localStorage.guest1number;
+    if (localStorage.guest1overnight==true) {
+      document.getElementById('guest1overnight').innerHTML = 'Overnight';
+    }
+
+    if(localStorage.guest2name != 'null') {
+      document.getElementById('guest2name').innerHTML = localStorage.guest2name;
+      document.getElementById('guest2number').innerHTML = localStorage.guest2number;
+      if (localStorage.guest2overnight==true) {
+        document.getElementById('guest2overnight').innerHTML = 'Overnight';
+      }
+    }
+
+    if(localStorage.guest3name != 'null') {
+      document.getElementById('guest3name').innerHTML = localStorage.guest3name;
+      document.getElementById('guest3number').innerHTML = localStorage.guest3number;
+      if (localStorage.guest3overnight==true) {
+        document.getElementById('guest3overnight').innerHTML = 'Overnight';
+      }
+    }
+
+    if(localStorage.guest4name != 'null') {
+      document.getElementById('guest4name').innerHTML = localStorage.guest4name;
+      document.getElementById('guest4number').innerHTML = localStorage.guest4number;
+      if (localStorage.guest4overnight==true) {
+        document.getElementById('guest4overnight').innerHTML = 'Overnight';
+      }
+    }
+}
 }
 
 function fillInfo () {
   fillGuestinfo();
   fillOvernightInfo();
+  fillReciepts();
+}
+
+function clearGuests () {
+  localStorage.numberStudents  = 0;
+  localStorage.numberNonStudents = 0;
+  localStorage.guest1name = null;
+  localStorage.guest2name = null;
+  localStorage.guest3name = null;
+  localStorage.guest4name = null;
+  localStorage.guest1number = null;
+  localStorage.guest2number = null;
+  localStorage.guest3number = null;
+  localStorage.guest4number = null;
+  localStorage.guest1overnight = false;
+  localStorage.guest2overnight = false;
+  localStorage.guest3overnight = false;
+  localStorage.guest4overnight = false;
 }

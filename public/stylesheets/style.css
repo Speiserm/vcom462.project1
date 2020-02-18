@@ -1,6 +1,6 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f9f1f1;
 }
 
 a {
@@ -11,8 +11,25 @@ p {
 
 }
 
+header {
+  background-color: #660000;
+  width: 100%;
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+  height: 50px
+}
+
 .wnumberInput {
   display: inline;
+}
+
+button {
+  position: relative;
+display: inline-block;
+padding: 1.2em 2em;
+text-decoration: none;
+text-align: center;
 }
 
 /* Hiding arrows on number input */
@@ -33,4 +50,16 @@ img {
 
 #studentCountDiv #nonStudentCountDiv img{
   display: inline;
+}
+
+#headerReset {
+  float:right;
+}
+
+#button1, #button2, #button3, #button4 {
+  visibility: hidden;
+}
+
+#overnightList  {
+  list-style-type: none;
 }

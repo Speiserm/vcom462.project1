@@ -5,7 +5,7 @@
         <ul id='overnightList'>
         </ul>
       </div>
-      <button type="submit" value="Submit" onclick="">Next -></button>
+      <button type="submit" value="Submit" onclick="">Next</button>
    </form>
   })
 })
