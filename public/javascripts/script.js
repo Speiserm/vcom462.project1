@@ -165,10 +165,6 @@ function fillOvernightInfo () {
 }
 }
 
-function flip (bool) {
-  console.log (bool);
-}
-
 function button1action () {
   var checkBox = document.getElementById("button1");
   if (checkBox.checked == true) {
@@ -221,15 +217,21 @@ function button4action () {
 function fillReciepts () {
   if (document.getElementById('completeDiv')){
   var list1 = document.getElementById('completeList');
+  if(localStorage.guest2name != 'null') {
     document.getElementById('guest1name').innerHTML = localStorage.guest1name;
-    document.getElementById('guest1number').innerHTML = localStorage.guest1number;
+    if (localStorage.guest1number==true) {
+      document.getElementById('guest1number').innerHTML = localStorage.guest1number;
+    }
     if (localStorage.guest1overnight==true) {
       document.getElementById('guest1overnight').innerHTML = 'Overnight';
     }
+  }
 
     if(localStorage.guest2name != 'null') {
       document.getElementById('guest2name').innerHTML = localStorage.guest2name;
-      document.getElementById('guest2number').innerHTML = localStorage.guest2number;
+      if (localStorage.guest2number==true) {
+        document.getElementById('guest2number').innerHTML = localStorage.guest2number;
+      }
       if (localStorage.guest2overnight==true) {
         document.getElementById('guest2overnight').innerHTML = 'Overnight';
       }
@@ -237,7 +239,9 @@ function fillReciepts () {
 
     if(localStorage.guest3name != 'null') {
       document.getElementById('guest3name').innerHTML = localStorage.guest3name;
-      document.getElementById('guest3number').innerHTML = localStorage.guest3number;
+      if (localStorage.guest3number==true) {
+        document.getElementById('guest3number').innerHTML = localStorage.guest2number;
+      }
       if (localStorage.guest3overnight==true) {
         document.getElementById('guest3overnight').innerHTML = 'Overnight';
       }
@@ -245,7 +249,9 @@ function fillReciepts () {
 
     if(localStorage.guest4name != 'null') {
       document.getElementById('guest4name').innerHTML = localStorage.guest4name;
-      document.getElementById('guest4number').innerHTML = localStorage.guest4number;
+      if (localStorage.guest4number==true) {
+        document.getElementById('guest4number').innerHTML = localStorage.guest2number;
+      }
       if (localStorage.guest4overnight==true) {
         document.getElementById('guest4overnight').innerHTML = 'Overnight';
       }
