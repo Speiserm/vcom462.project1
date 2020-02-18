@@ -1,15 +1,16 @@
 @html.extend('layout', function(model) {
   @html.block('content', function(model) {
-    <body onload="fillGuestinfo()">
+    <span onload="fillGuestinfo()"></span>
      <h1 id='nameheader'>Welcome to the Courtyard desk kiosk, </h1>
      <h2>Please enter your guests' information:</h2>
-     <form action="guestinfo.html">
+     <form action="/numberovernight">
        <div id='studentInfoDiv'>
          <ul id='studentInfoList'>
          </ul>
        </div>
        <div id='nonStudentCountDiv'>
        </div>
+       <button type="submit" value="Submit" onclick="">Next ->1</button>
      </form>
      <p id='warningtext'></p>
   })
