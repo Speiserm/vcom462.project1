@@ -1,17 +1,17 @@
 @html.extend('layout', function(model) {
   @html.block('content', function(model) {
-     //<form action="/numberovernight">
+     <form action="/numberovernight">
+       <h4 id='studentInfoHeader'> </h4>
        <div id='studentInfoDiv'>
          <ul id='studentInfoList'>
-           <button onclick="fillGuestinfo()">+</button>
          </ul>
        </div>
+       <h4 id='nonStudentInfoHeader'></h4>
        <div id='nonStudentInfoDiv'>
          <ul id='nonStudentInfoList'>
          </ul>
        </div>
-       <button type="submit" value="Submit" onclick="">Next -></button>
-    // </form>
-     <p id='warningtext'></p>
+       <button type="submit" value="Submit" onmouseover="saveGuestInfo()">Next -></button>
+    </form>
   })
 })

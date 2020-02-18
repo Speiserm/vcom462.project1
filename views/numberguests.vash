@@ -1,6 +1,5 @@
 @html.extend('layout', function(model) {
   @html.block('content', function(model) {
-    <span onload="fillNumberguests()">   </span>
      <form action="/guestinfo">
        <div id='studentCountDiv'>
          <img onclick="decrease('studentCount')" src="images/minus.png" class = 'numbericons'/>
@@ -13,7 +12,7 @@
          <p id='nonStudentCount'>0</p>
          <img onclick="increase('nonStudentCount')" src="images/plus.png"/>
        </div>
-       <button type="submit" value="Submit" onclick="saveGuestNumbers()">Next ->1</button>
+       <button type="submit" value="Submit" onclick="saveGuestCount()">Next ->1</button>
      </form>
      <p id='warningtext'></p>
   })

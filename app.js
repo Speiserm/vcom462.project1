@@ -11,6 +11,7 @@ var wnumberRouter = require('./routes/wnumber');
 var numberguestsRouter = require('./routes/numberguests');
 var guestinfoRouter = require('./routes/guestinfo');
 var numberovernightRouter = require('./routes/numberovernight');
+var completeRouter = require('./routes/complete');
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use('/wnumber', wnumberRouter);
 app.use('/numberguests', numberguestsRouter);
 app.use('/guestinfo', guestinfoRouter);
 app.use('/numberovernight', numberovernightRouter);
+app.use('/complete', completeRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
