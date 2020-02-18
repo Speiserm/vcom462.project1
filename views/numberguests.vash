@@ -1,8 +1,6 @@
 @html.extend('layout', function(model) {
   @html.block('content', function(model) {
     <span onload="fillNumberguests()">   </span>
-     <h1 id='nameheader'>Welcome to the Courtyard desk kiosk, </h1>
-     <h2>how many of your guests are winthrop students?</h2>
      <form action="/guestinfo">
        <div id='studentCountDiv'>
          <img onclick="decrease('studentCount')" src="images/minus.png" class = 'numbericons'/>

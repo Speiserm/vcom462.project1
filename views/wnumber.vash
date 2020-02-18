@@ -1,6 +1,5 @@
 @html.extend('layout', function(model) {
   @html.block('content', function(model) {
-    <h2>Please enter your W#:</h2>
     <form action="/numberguests">
         <p class="wnumberInput">W</p>
         <input id="wnumber" class="wnumberInput" type="number" placeholder="12345678" step="1" min="10000000" max="99999999"/>

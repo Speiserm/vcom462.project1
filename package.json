@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www",
+    "serverstart": "DEBUG=revertedsun:* npm run devstart",
+    "scss": "npx node-sass -o public/stylesheets/ sass/style.scss"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

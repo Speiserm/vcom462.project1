@@ -1,6 +1,5 @@
 @html.extend('layout', function(model) {
   @html.block('content', function(model) {
-    <h2>ASelect which guests are staying overnight:</h2>
 
   })
 })
