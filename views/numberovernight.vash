@@ -1,0 +1,7 @@
+@html.extend('layout', function(model) {
+  @html.block('content', function(model) {
+    <h2>Are any of your guests staying overnight?</h2>
+    <input type="button" onclick="location.href='isstudent.html';" value="Yes" />
+    <input type="button" onclick="location.href='success.html';" value="No" />
+  })
+})

@@ -1,0 +1,22 @@
+@html.extend('layout', function(model) {
+  @html.block('content', function(model) {
+    <body onload="fillNumberguests()">
+     <h1 id='nameheader'>Welcome to the Courtyard desk kiosk, </h1>
+     <h2>how many of your guests are winthrop students?</h2>
+     <form action="guestinfo.html">
+       <div id='studentCountDiv'>
+         <img onclick="decrease('studentCount')" src="images/minus.png" class = 'numbericons'/>
+         <p id='studentCount'>0</p>
+         <img onclick="increase('studentCount')" src="images/plus.png"/>
+       </div>
+       <h2>how many of your guests are not winthrop students?</h2>
+       <div id='nonStudentCountDiv'>
+         <img onclick="decrease('nonStudentCount')" src="images/minus.png"/>
+         <p id='nonStudentCount'>0</p>
+         <img onclick="increase('nonStudentCount')" src="images/plus.png"/>
+       </div>
+       <button type="submit" value="Submit" onclick="">Next ->1</button>
+     </form>
+     <p id='warningtext'></p>
+  })
+})

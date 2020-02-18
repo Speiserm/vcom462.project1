@@ -1,0 +1,6 @@
+@html.extend('layout', function(model) {
+  @html.block('content', function(model) {
+    <h1>Welcome to the Courtyard desk kiosk</h1>
+    <input type="button" onclick="location.href='/wnumber';" value="Check in your guests" />
+  })
+})

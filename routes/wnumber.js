@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET wnumber page. */
 router.get('/', function (req, res) {
-    res.render('index', { title: 'Courtyard kiosk',
-                          content:'Courtyard kiosk'});
+    res.render('wnumber', { title: 'Courtyard Kiosk' });
 });
 
 module.exports = router;
