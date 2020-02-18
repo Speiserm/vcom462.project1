@@ -11,7 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="screen"></head>
 <body>
-  <header><h1 id='nameheader'>Welcome to the Courtyard desk kiosk  </h1></header>
+  <header><h1 id='nameheader'>Welcome to the Courtyard desk kiosk</h1></header>
   <h2 id="prompt">@model.prompt</h2>
   @html.block('content')
   <footer></footer>

@@ -13,7 +13,7 @@
          <p id='nonStudentCount'>0</p>
          <img onclick="increase('nonStudentCount')" src="images/plus.png"/>
        </div>
-       <button type="submit" value="Submit" onclick="">Next ->1</button>
+       <button type="submit" value="Submit" onclick="saveGuestNumbers()">Next ->1</button>
      </form>
      <p id='warningtext'></p>
   })
