@@ -1,5 +1,8 @@
 @html.extend('layout', function(model) {
   @html.block('content', function(model) {
-    <input type="button" onclick="location.href='/wnumber';" value="Check in your guests" />
+    <form action='/wnumber'>
+      <button type='submit' id="checkinButton">Check in</button>
+    </form>
+    //<input type="button" onclick="location.href='/wnumber';" value="Check in your guests" />
   })
 })
