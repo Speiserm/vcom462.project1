@@ -9,12 +9,12 @@
   <title>@model.title</title>
   <script src="javascripts/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="screen"></head>
 <body onload='fillInfo()'>
   <header> <form action="/"><h1 id='nameheader'>Welcome to the Courtyard desk kiosk</h1><button id="headerReset" type="submit" value="Start over" onclick="clearGuests()">Start over</button></form></header>
+  <div id="centerPrompt"><h2 id="prompt">@model.prompt</h2></div>
   <div id='center'>
-  <h2 id="prompt">@model.prompt</h2>
   @html.block('content')
   </div>
   <footer></footer>

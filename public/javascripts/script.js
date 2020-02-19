@@ -100,6 +100,16 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
+function validateWnumber () {
+  var number = parseInt(document.getElementById('wnumber').value);
+  if ( number > 10000000 && number < 99999999) {
+    location.href='/numberguests';
+  }
+  else {
+    document.getElementById('warningtext').innerHTML = "Sorry, that's not a valid W number.";
+  }
+}
+
 function saveGuestCount () {
   localStorage.numberStudents  = parseInt(document.getElementById('studentCount').innerHTML);
   localStorage.numberNonStudents = parseInt(document.getElementById('nonStudentCount').innerHTML);

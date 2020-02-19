@@ -2,17 +2,17 @@
   @html.block('content', function(model) {
      <form action="/guestinfo">
        <div id='studentCountDiv'>
-         <img onclick="decrease('studentCount')" src="images/minus.png" class = 'numbericons'/>
+         <img class="mathButtons" onclick="decrease('studentCount')" src="images/minus.png" class = 'numbericons'/>
          <p id='studentCount'>0</p>
-         <img onclick="increase('studentCount')" src="images/plus.png"/>
+         <img class="mathButtons" onclick="increase('studentCount')" src="images/plus.png"/>
        </div>
-       <h2>how many of your guests are not winthrop students?</h2>
+       <h2 id="numberGuestsPrompt">How many of your guests are not winthrop students?</h2>
        <div id='nonStudentCountDiv'>
-         <img onclick="decrease('nonStudentCount')" src="images/minus.png"/>
+         <img class="mathButtons" onclick="decrease('nonStudentCount')" src="images/minus.png"/>
          <p id='nonStudentCount'>0</p>
-         <img onclick="increase('nonStudentCount')" src="images/plus.png"/>
+         <img class="mathButtons" onclick="increase('nonStudentCount')" src="images/plus.png"/>
        </div>
-       <button type="submit" value="Submit" onclick="saveGuestCount()">Next</button>
+       <button type="submit" value="Submit" id="numberguestsSubmit" onclick="saveGuestCount()">Next</button>
      </form>
      <p id='warningtext'></p>
   })
