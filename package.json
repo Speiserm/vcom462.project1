@@ -9,7 +9,7 @@
     "scss": "npx node-sass -o public/stylesheets/ sass/style.scss"
   },
   "dependencies": {
-    "@okta/oidc-middleware": "^0.1.3",
+    "@okta/oidc-middleware": "^5.0.0",
     "@okta/okta-sdk-nodejs": "^3.1.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
